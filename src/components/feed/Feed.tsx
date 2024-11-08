@@ -3,7 +3,7 @@ import Post from "./Post";
 import prisma from "@/lib/client";
 
 const Feed = async ({ username }: { username?: string }) => {
-  const { userId } = auth();
+  const { userId } =  await auth();
 
   let posts:any[] =[];
 

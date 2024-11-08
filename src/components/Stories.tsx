@@ -4,7 +4,7 @@ import Image from "next/image";
 import StoryList from "./StoryList";
 
 const Stories = async () => {
-  const { userId: currentUserId } = auth();
+  const { userId: currentUserId } = await auth();
 
   if (!currentUserId) return null;
 

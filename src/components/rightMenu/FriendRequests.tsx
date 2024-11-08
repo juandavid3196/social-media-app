@@ -5,7 +5,7 @@ import Link from "next/link";
 import FriendRequestList from "./FriendRequestList";
 
 const FriendRequests = async () => {
-  const { userId } = auth();
+  const { userId } = await auth();
 
   if (!userId) return null;
 

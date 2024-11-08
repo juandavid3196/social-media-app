@@ -12,8 +12,8 @@ type FeedPostType = PostType & { user: User } & {
   _count: { comments: number };
 };
 
-const Post = ({ post }: { post: FeedPostType }) => {
-  const { userId } = auth();
+const Post =  async ({ post }: { post: FeedPostType }) => {
+  const { userId } = await auth();
   return (
     <div className="flex flex-col gap-4">
       {/* USER */}
